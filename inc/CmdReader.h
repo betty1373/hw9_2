@@ -23,22 +23,7 @@ public:
     void Subscribe(const std::shared_ptr<Observer>& obs) override {
         m_observers.emplace_back(obs);
     }
-    // void Unsubscribe(const std::shared_ptr<Observer>& observer ) override {
-    //     std::cout<<m_observers.size()<<std::endl;
-    //     m_observers.erase(
-    //         std::remove_if(
-    //             m_observers.begin(),
-    //             m_observers.end(),
-    //             [&](const std::weak_ptr<Observer>& wptr)
-    //             {
-    //                 return wptr.expired() || wptr.lock() == observer;
-    //             }
-    //         ),
-    //         m_observers.end()
-    //     );
-    //     std::cout<<"Unsubscribe ConsoleLogger"<<std::endl;
-    //     std::cout<<m_observers.size()<<std::endl;
-    // }
+    
 /// @brief Notifies subscribers and sends batch of cmds to their   
     void Notify() override {
         if (m_cmds.empty()) return;   
@@ -59,7 +44,6 @@ public:
         m_cmds.reserve(m_num_cmds);
         std::string cmd;
         size_t cnt_braces=0;
-        std::chrono::milliseconds dura(500);
         while(std::getline(m_istream,cmd)) {          
             if (cmd=="{") {
                if ((cnt_braces==0) && !m_cmds.empty()) Notify();
@@ -80,10 +64,14 @@ public:
                     if (cnt_braces==0 && m_cmds.size()==m_num_cmds) Notify();
                 }
             }
-            //std::this_thread::sleep_for(dura);
         }
         if ((cnt_braces==0) && !m_cmds.empty()) Notify();
     };
+    void SetContext(void* a_context)
+    {
+        m_context = a_context;
+    }
+
 private:
 /// @brief Private Constructor
     CmdReader(const size_t num_cmds,std::istream& istream=std::cin) 
@@ -101,6 +89,7 @@ private:
         }
         return ss;     
     }
+    void* m_context;
     const size_t m_num_cmds;
     std::istream& m_istream;
     std::vector<std::string> m_cmds;

@@ -14,7 +14,7 @@
 class ConsoleLogger : public Observer, public std::enable_shared_from_this<ConsoleLogger> {
 public:
 /// @brief Create object class - PatternCreater
-     static std::shared_ptr<Observer> Create(const std::string& name, std::shared_ptr<CmdReader>& reader) {
+     static std::shared_ptr<ConsoleLogger> Create(const std::string& name, std::shared_ptr<CmdReader>& reader) {
         auto ptr = std::shared_ptr<ConsoleLogger>{ new ConsoleLogger (name)};
         ptr->SetCmdReader(reader);
         return ptr;
@@ -31,6 +31,10 @@ public:
         }
         m_cv.notify_all();
     };
+    void SetContext(void* a_context)
+    {
+        m_context = a_context;
+    }
 private:  
 
     ConsoleLogger(const std::string& m_name) :
@@ -75,6 +79,7 @@ private:
             m_thread.join();
         }
     }
+    void* m_context;
     std::weak_ptr<CmdReader> m_reader;
    
     std::mutex m_mutex;
@@ -90,7 +95,7 @@ private:
 class FileLogger : public Observer, public std::enable_shared_from_this<FileLogger> {
 public:  
 /// @brief Create object class - PatternCreater  
-     static std::shared_ptr<Observer> Create(const std::string& name,std::shared_ptr<CmdReader>& reader) {
+     static std::shared_ptr<FileLogger> Create(const std::string& name,std::shared_ptr<CmdReader>& reader) {
         auto ptr = std::shared_ptr<FileLogger>{ new FileLogger(name)};
         ptr->SetCmdReader(reader);
         return ptr;
@@ -107,6 +112,10 @@ public:
         }
         m_cv.notify_one();
     };
+    void SetContext(void* a_context)
+    {
+        m_context = a_context;
+    }
 private:
     FileLogger(const std::string& name) : m_stop {false}
     {
@@ -158,6 +167,7 @@ private:
             ptr->Subscribe(shared_from_this());
         }
     }
+    void* m_context;
     std::weak_ptr<CmdReader> m_reader;
     std::vector<std::thread> m_threads;
     std::mutex m_mutex;
