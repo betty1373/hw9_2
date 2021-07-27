@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['_7ecmdreader_83',['~CmdReader',['../class_cmd_reader.html#a5202e750035579e6d7269b695f8a5c9b',1,'CmdReader']]],
-  ['_7econsolelogger_84',['~ConsoleLogger',['../class_console_logger.html#a3be1e5529580f0ba3bc98b4e18ccd5a8',1,'ConsoleLogger']]],
-  ['_7efilelogger_85',['~FileLogger',['../class_file_logger.html#af255961bda9980fab979996276e4b5e1',1,'FileLogger']]],
-  ['_7eobservable_86',['~Observable',['../class_observable.html#a058acb5a674eba2b96648c66a27440d8',1,'Observable']]],
-  ['_7eobserver_87',['~Observer',['../class_observer.html#afcc6b67be6c386f2f3d2c363aa59cb47',1,'Observer']]]
+  ['update_96',['Update',['../class_console_logger.html#ab75a39ba8d7d9c5b90f3292247b75e8c',1,'ConsoleLogger::Update()'],['../class_file_logger.html#a682946c821d8a412b3f77db99fa2afde',1,'FileLogger::Update()'],['../class_observer.html#a7b2adc9ad992dd9abe17433b3ab7e89d',1,'Observer::Update()']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['update_81',['Update',['../class_console_logger.html#ab75a39ba8d7d9c5b90f3292247b75e8c',1,'ConsoleLogger::Update()'],['../class_file_logger.html#a682946c821d8a412b3f77db99fa2afde',1,'FileLogger::Update()'],['../class_observer.html#a7b2adc9ad992dd9abe17433b3ab7e89d',1,'Observer::Update()']]]
+  ['set_93',['set',['../_c_make_lists_8txt.html#aee179ed686fbcfa553957f2befcd2ab4',1,'set(ENV{GITHUB_RUN_NUMBER} 1) endif() project(bulkmt VERSION 0.0. $ENV:&#160;CMakeLists.txt'],['../_c_make_lists_8txt.html#a9267ccdfbbaf6ba4f55c35f3a1f7fd90',1,'set(CPACK_PACKAGE_VERSION_MINOR &quot;${PROJECT_VERSION_MINOR}&quot;) set(CPACK_PACKAGE_VERSION_PATCH &quot;$:&#160;CMakeLists.txt']]],
+  ['subscribe_94',['Subscribe',['../class_cmd_reader.html#ae277a8d4bb46945d1e57bc8f77e3a664',1,'CmdReader::Subscribe(const std::shared_ptr&lt; Observer &gt; &amp;obs) override'],['../class_cmd_reader.html#ae277a8d4bb46945d1e57bc8f77e3a664',1,'CmdReader::Subscribe(const std::shared_ptr&lt; Observer &gt; &amp;obs) override'],['../class_observable.html#a3f64dccc8b909a55cb41301d9f4053c0',1,'Observable::Subscribe()']]]
 ];
