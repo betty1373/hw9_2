@@ -11,7 +11,8 @@ var searchData=
   ['compiler_5fid_14',['COMPILER_ID',['../_c_make_c_x_x_compiler_id_8cpp.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCXXCompilerId.cpp'],['../_c_make_c_compiler_id_8c.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCCompilerId.c']]],
   ['connect_15',['connect',['../namespaceasync.html#a003d1a6899dca20ddcbff67a6abfb491',1,'async']]],
   ['consolelogger_16',['ConsoleLogger',['../class_console_logger.html',1,'']]],
-  ['context_2eh_17',['Context.h',['../_context_8h.html',1,'']]],
-  ['create_18',['Create',['../class_cmd_reader.html#a76c3491add1cb88d80c7d5020d22d8c7',1,'CmdReader::Create()'],['../class_file_logger.html#addd27040d1f40c1e38a285e5a79a634b',1,'FileLogger::Create()'],['../class_console_logger.html#a2bf0727eea3b64c48c3633be8a085617',1,'ConsoleLogger::Create()'],['../class_cmd_reader.html#a76c3491add1cb88d80c7d5020d22d8c7',1,'CmdReader::Create()']]],
-  ['cxx_5fstd_19',['CXX_STD',['../_c_make_c_x_x_compiler_id_8cpp.html#a34cc889e576a1ae6c84ae9e0a851ba21',1,'CMakeCXXCompilerId.cpp']]]
+  ['context_17',['Context',['../class_context.html#adfd31b39179c90e89e9d6b5a25574e0c',1,'Context::Context()'],['../class_context.html',1,'Context']]],
+  ['context_2eh_18',['Context.h',['../_context_8h.html',1,'']]],
+  ['create_19',['Create',['../class_file_logger.html#a354fb832cd9fe841ca8137da16b8f704',1,'FileLogger::Create()'],['../class_console_logger.html#ac511c08ac69afa3cb603a75797d94494',1,'ConsoleLogger::Create()'],['../class_cmd_reader.html#a76c3491add1cb88d80c7d5020d22d8c7',1,'CmdReader::Create()']]],
+  ['cxx_5fstd_20',['CXX_STD',['../_c_make_c_x_x_compiler_id_8cpp.html#a34cc889e576a1ae6c84ae9e0a851ba21',1,'CMakeCXXCompilerId.cpp']]]
 ];
