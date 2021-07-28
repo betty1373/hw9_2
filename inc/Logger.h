@@ -2,11 +2,10 @@
 #define Logger_H
 #include <fstream>
 #include <atomic>
-#include <deque>
+#include <queue>
 #include <mutex>
 #include <thread>
 #include <condition_variable>
-
 #include "CmdReader.h"
 /// @file
 /// @brief Class outs data from stringstream to console
@@ -26,9 +25,11 @@ public:
 /// @brief Outs data from stringstream to console
     void Update(std::stringstream& ss) override {
         {
-            std::unique_lock<std::mutex> lk(m_mutex);
-            m_deque.push_back(ss.str());
+            std::unique_lock<std::mutex> lk(m_mutex);  
+            std::string str = "ss.str()";         
+            m_deque.push(str);
         }
+        //std::cout<<ss.str()<<std::endl;
         m_cv.notify_all();
     };
     void SetContext(void* a_context)
@@ -50,25 +51,26 @@ private:
         }
     }
     void Work(std::string prefix)
-    {
-        
+    { 
+        std::string ss; 
         while (!m_stop)
-        {
-            std::string ss;
+        {               
             {
                 std::unique_lock<std::mutex> lk(m_mutex);
                 m_cv.wait(lk,[&]() {return !m_deque.empty() || m_stop;});
-
+            
                 if (!m_deque.empty()) {
                     ss = m_deque.front();
-                    m_deque.pop_front();
+                    m_deque.pop();
                 }
             }
-            if (ss.length()>0)
+             std::cout<<ss.size()<<std::endl;
+            if (ss.size())
             {
-                std::unique_lock<std::mutex> lk(m_outmutex); 
+               // std::unique_lock<std::mutex> lk(m_outmutex); 
                 std::cout<<ss<<std::endl;
             }
+            ss.clear();
         }
     }
     void StopWork()
@@ -87,7 +89,7 @@ private:
     std::thread m_thread;
     std::atomic<bool> m_stop;
     std::condition_variable m_cv;
-    std::deque<std::string> m_deque;
+    std::queue<std::string> m_deque;
 };
 /// @file
 /// @brief Class outs data from stringstream to file
@@ -96,6 +98,7 @@ class FileLogger : public Observer, public std::enable_shared_from_this<FileLogg
 public:  
 /// @brief Create object class - PatternCreater  
      static std::shared_ptr<FileLogger> Create(const std::string& name,std::shared_ptr<CmdReader>& reader) {
+           std::cout<<"Construct FileLogger"<<std::endl;
         auto ptr = std::shared_ptr<FileLogger>{ new FileLogger(name)};
         ptr->SetCmdReader(reader);
         return ptr;
@@ -108,7 +111,7 @@ public:
     void Update(std::stringstream& ss) override {
         {
             std::unique_lock<std::mutex> lk(m_mutex);
-            m_deque.push_back(ss.str());
+            m_deque.push(ss.str());
         }
         m_cv.notify_one();
     };
@@ -119,34 +122,35 @@ public:
 private:
     FileLogger(const std::string& name) : m_stop {false}
     {
+         std::cout<<"Construct FileLogger"<<std::endl;
         for (size_t i=0;i<2;i++) {
-            std::string m_name = name + std::to_string(i);
+            std::string m_name = name + std::to_string(i+1);
             m_threads.emplace_back(std::thread(&FileLogger::Work,this,m_name));
         }
-
+      
     }
     void Work(std::string postfix)
     {
+        std::string ss;
         while (!m_stop)
-        {
-            std::string ss;
+        {            
             {
                 std::unique_lock<std::mutex> lk(m_mutex);
                 m_cv.wait(lk,[&]() {return !m_deque.empty() || m_stop;});
 
                 if (!m_deque.empty()) {
                     ss = m_deque.front();
-                    m_deque.pop_front();
+                    m_deque.pop();
                 }
             }
-            if (ss.length()>0)
-            {
-                auto time = std::to_string(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count());
-                auto fileName{"bulk_"+postfix+"_"+time+".log"};
-                std::ofstream log(fileName,std::ios::out);
-                log << ss << std::endl;
-                log.close();
-            }
+            // if (ss.length()>0)
+            // {
+            //     auto time = std::to_string(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count());
+            //     auto fileName{"bulk_"+postfix+"_"+time+".log"};
+            //     std::ofstream log(fileName,std::ios::out);
+            //     log << ss << std::endl;
+            //     log.close();
+            // }
         }
     }
     void StopWork()
@@ -173,6 +177,6 @@ private:
     std::mutex m_mutex;
     std::atomic<bool> m_stop;
     std::condition_variable m_cv;
-    std::deque<std::string> m_deque;
+    std::queue<std::string> m_deque;
 };
 #endif
