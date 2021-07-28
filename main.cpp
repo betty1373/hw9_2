@@ -1,27 +1,19 @@
-#include "inc/Logger.h"
+#include "inc/async.h"
 
 /// @file
 /// @brief Main function. Test for processing commands.
 /// @author btv<example@example.com>
-int main(int argc, char * argv[]) {
-   if (argc < 2) {
-      std::cerr<<"Use"<<argv[0]<<"<bulk_size>\n";
-      return EXIT_FAILURE;
-   }
-   size_t num = std::atoi(argv[1]);
-   if (num<=0) {
-       std::cerr<<"Bulk size must be greater than 0\n";
-      return EXIT_FAILURE;
-   }
-   auto cmdReader = CmdReader::Create(num);
-   auto consoleLogger = ConsoleLogger::Create("log",cmdReader);
-   auto fileLogger = FileLogger::Create("file",cmdReader);
-   try {
-      cmdReader->Work();
-   }
-   catch (std::runtime_error& e) {
-      std::cerr <<"Error :"<< e.what()<<std::endl;
-      return EXIT_FAILURE;
-   }
-   return 0;
-}  
+
+ int main(int, char *[]) {
+    std::size_t bulk = 5;
+    auto h = async::connect(bulk);
+  //  auto h2 = async::connect(bulk);        
+   // async::receive(h, "1", 1);
+   // async::receive(h2, "1\n", 2);
+   //async::receive(h, "\n2\n3\n4\n5\n6\n{\na\n", 15);
+   //async::receive(h, "b\nc\nd\n}\n89\n", 11);
+    async::disconnect(h);
+  //  async::disconnect(h2);
+
+    return 0;
+}
