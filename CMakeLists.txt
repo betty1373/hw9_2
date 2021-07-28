@@ -9,6 +9,7 @@ set(CXX_STANDARD 20)
 configure_file(version.h.in ${PROJECT_SOURCE_DIR}/version.h)
 
 add_library(async SHARED ${PROJECT_SOURCE_DIR}/src/CmdReader.cpp 
+                         ${PROJECT_SOURCE_DIR}/src/Logger.cpp 
                          ${PROJECT_SOURCE_DIR}/src/Context.cpp 
                          ${PROJECT_SOURCE_DIR}/src/async.cpp)
 

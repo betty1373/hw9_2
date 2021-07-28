@@ -13,74 +13,18 @@
 class ConsoleLogger : public Observer, public std::enable_shared_from_this<ConsoleLogger> {
 public:
 /// @brief Create object class - PatternCreater
-     static std::shared_ptr<ConsoleLogger> Create(const std::string& name, std::shared_ptr<CmdReader>& reader) {
-        auto ptr = std::shared_ptr<ConsoleLogger>{ new ConsoleLogger (name)};
-        ptr->SetCmdReader(reader);
-        return ptr;
-    }
-     virtual ~ConsoleLogger() {
-         StopWork();
-         std::cout<<"Destroy ConsoleLogger"<<std::endl;
-     };
+     static std::shared_ptr<ConsoleLogger> Create(const std::string& name, std::shared_ptr<CmdReader>& reader); ;
+     ~ConsoleLogger(); ;
 /// @brief Outs data from stringstream to console
-    void Update(std::stringstream& ss) override {
-        {
-            std::unique_lock<std::mutex> lk(m_mutex);  
-            std::string str = "ss.str()";         
-            m_deque.push(str);
-        }
-        //std::cout<<ss.str()<<std::endl;
-        m_cv.notify_all();
-    };
-    void SetContext(void* a_context)
-    {
-        m_context = a_context;
-    }
-private:  
+    void Update(std::stringstream& ss) override;
+    void SetContext(void* a_context);;
+private: 
 
-    ConsoleLogger(const std::string& m_name) :
-        m_stop {false},
-        m_thread {&ConsoleLogger::Work,this,m_name}
-    {}
+    ConsoleLogger(const std::string& m_name);
 /// @brief Subscribe to receiving notifications
-   void SetCmdReader(std::shared_ptr<CmdReader>& _reader) {
-        m_reader = _reader;
-        auto ptr = m_reader.lock();
-        if (ptr) {
-            ptr->Subscribe(shared_from_this());
-        }
-    }
-    void Work(std::string prefix)
-    { 
-        std::string ss; 
-        while (!m_stop)
-        {               
-            {
-                std::unique_lock<std::mutex> lk(m_mutex);
-                m_cv.wait(lk,[&]() {return !m_deque.empty() || m_stop;});
-            
-                if (!m_deque.empty()) {
-                    ss = m_deque.front();
-                    m_deque.pop();
-                }
-            }
-             std::cout<<ss.size()<<std::endl;
-            if (ss.size())
-            {
-               // std::unique_lock<std::mutex> lk(m_outmutex); 
-                std::cout<<ss<<std::endl;
-            }
-            ss.clear();
-        }
-    }
-    void StopWork()
-    {
-        m_stop = true;
-        m_cv.notify_all();
-        if (m_thread.joinable()) {
-            m_thread.join();
-        }
-    }
+   void SetCmdReader(std::shared_ptr<CmdReader>& _reader);
+    void Work(std::string prefix);
+    void StopWork();
     void* m_context;
     std::weak_ptr<CmdReader> m_reader;
    
@@ -97,80 +41,17 @@ private:
 class FileLogger : public Observer, public std::enable_shared_from_this<FileLogger> {
 public:  
 /// @brief Create object class - PatternCreater  
-     static std::shared_ptr<FileLogger> Create(const std::string& name,std::shared_ptr<CmdReader>& reader) {
-           std::cout<<"Construct FileLogger"<<std::endl;
-        auto ptr = std::shared_ptr<FileLogger>{ new FileLogger(name)};
-        ptr->SetCmdReader(reader);
-        return ptr;
-    }
-     virtual ~FileLogger() {
-         StopWork();
-         std::cout<<"Destroy FileLogger"<<std::endl;
-     };
+     static std::shared_ptr<FileLogger> Create(const std::string& name,std::shared_ptr<CmdReader>& reader);
+     ~FileLogger();
 /// @brief Outs data from stringstream to file
-    void Update(std::stringstream& ss) override {
-        {
-            std::unique_lock<std::mutex> lk(m_mutex);
-            m_deque.push(ss.str());
-        }
-        m_cv.notify_one();
-    };
-    void SetContext(void* a_context)
-    {
-        m_context = a_context;
-    }
+    void Update(std::stringstream& ss) override;
+    void SetContext(void* a_context);
 private:
-    FileLogger(const std::string& name) : m_stop {false}
-    {
-         std::cout<<"Construct FileLogger"<<std::endl;
-        for (size_t i=0;i<2;i++) {
-            std::string m_name = name + std::to_string(i+1);
-            m_threads.emplace_back(std::thread(&FileLogger::Work,this,m_name));
-        }
-      
-    }
-    void Work(std::string postfix)
-    {
-        std::string ss;
-        while (!m_stop)
-        {            
-            {
-                std::unique_lock<std::mutex> lk(m_mutex);
-                m_cv.wait(lk,[&]() {return !m_deque.empty() || m_stop;});
-
-                if (!m_deque.empty()) {
-                    ss = m_deque.front();
-                    m_deque.pop();
-                }
-            }
-            // if (ss.length()>0)
-            // {
-            //     auto time = std::to_string(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count());
-            //     auto fileName{"bulk_"+postfix+"_"+time+".log"};
-            //     std::ofstream log(fileName,std::ios::out);
-            //     log << ss << std::endl;
-            //     log.close();
-            // }
-        }
-    }
-    void StopWork()
-    {
-        m_stop = true;
-        m_cv.notify_all();
-        for (auto& thread : m_threads) {
-            if (thread.joinable()) {
-                thread.join();
-            }
-        }
-    };
+    FileLogger(const std::string& name);
+    void Work(std::string postfix);
+    void StopWork();
 /// @brief Subscribe to receiving notifications
-    void SetCmdReader(std::shared_ptr<CmdReader>& _reader) {
-        m_reader = _reader;
-        auto ptr = m_reader.lock();
-        if (ptr) {
-            ptr->Subscribe(shared_from_this());
-        }
-    }
+    void SetCmdReader(std::shared_ptr<CmdReader>& _reader);
     void* m_context;
     std::weak_ptr<CmdReader> m_reader;
     std::vector<std::thread> m_threads;

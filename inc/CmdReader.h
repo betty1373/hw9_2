@@ -23,11 +23,9 @@ public:
     void Work();
     void NewCmd(const std::string& cmd);
     void SetContext(void* a_context);
-
 private:
 /// @brief Private Constructor
     CmdReader(const size_t num_cmds,std::istream& istream=std::cin);
-
 /// @brief Forms batch to stringstream
     std::stringstream FormBatch();
     void* m_context;

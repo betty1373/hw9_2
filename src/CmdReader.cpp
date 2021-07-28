@@ -51,6 +51,7 @@
                     if (m_cnt_braces==0 && m_cmds.size()==m_num_cmds) Notify();
                 }
             }
+             std::cout<<m_context<<std::endl;
     };
     void CmdReader::SetContext(void* a_context)
     {
@@ -73,6 +74,6 @@
             else
                 ss<<"bulk: "<<*it_cmd;
         }
-        std::cout<<ss.str()<<std::endl;
+       // std::cout<<ss.str()<<std::endl;
         return ss;     
     }

@@ -7,15 +7,17 @@
     m_cmdReader =  CmdReader::Create(static_cast<size_t>(numCmds));
      
     m_consoleLogger = ConsoleLogger::Create("log",m_cmdReader);
-   // m_fileLogger = FileLogger::Create("file",m_cmdReader);
+    m_fileLogger = FileLogger::Create("file",m_cmdReader);
     
     m_cmdReader->SetContext(this);
     m_consoleLogger->SetContext(this);
-   // m_fileLogger->SetContext(this);
+    m_fileLogger->SetContext(this);
+    std::cout<<"Construct Context"<<std::endl;
     
   }
   Context::~Context() {
       StopWork();
+       std::cout<<"Destroy Context"<<std::endl;
   };
 
   void Context::NewData(const char* data, std::size_t size) {
@@ -28,8 +30,7 @@
   }
 
   void Context::Work() 
-  {  
-
+  { 
     while (!m_stop) {
       
       std::unique_lock<std::mutex> locker(m_mutex);
