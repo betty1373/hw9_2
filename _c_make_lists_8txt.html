@@ -63,7 +63,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">CMakeLists.txt File Reference</div>  </div>
 </div><!--header-->
@@ -75,10 +76,25 @@ Functions</h2></td></tr>
 <tr class="separator:afc86fa819c55f45cb5f2c9d0e2aae45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47512afd6654a96f774df627445acfc7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a47512afd6654a96f774df627445acfc7">set</a> (ENV{GITHUB_RUN_NUMBER} 1) endif() project(async VERSION 0.0. $ENV</td></tr>
 <tr class="separator:a47512afd6654a96f774df627445acfc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af85f971876ef2a74eb9e4141da60a698"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#af85f971876ef2a74eb9e4141da60a698">find_package</a> (Threads REQUIRED) <a class="el" href="_c_make_lists_8txt.html#a47512afd6654a96f774df627445acfc7">set</a>(CXX_STANDARD 20) configure_file(version.h.in $</td></tr>
-<tr class="separator:af85f971876ef2a74eb9e4141da60a698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bdffac531973ded817e95845104ba43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a9bdffac531973ded817e95845104ba43">find_package</a> (Threads REQUIRED) <a class="el" href="_c_make_lists_8txt.html#a9267ccdfbbaf6ba4f55c35f3a1f7fd90">set</a>(CXX_STANDARD 14) configure_file(version.h.in $</td></tr>
+<tr class="separator:a9bdffac531973ded817e95845104ba43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7eb6c11e416cbb47a3d0d3e3467fac5"><td class="memItemLeft" align="right" valign="top">version h&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#ab7eb6c11e416cbb47a3d0d3e3467fac5">add_library</a> (async SHARED ${PROJECT_SOURCE_DIR}/src/CmdReader.cpp ${PROJECT_SOURCE_DIR}/src/Logger.cpp ${PROJECT_SOURCE_DIR}/src/Context.cpp ${PROJECT_SOURCE_DIR}/src/async.cpp) add_executable(async_cli $</td></tr>
 <tr class="separator:ab7eb6c11e416cbb47a3d0d3e3467fac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3de9a7275e27bde8ae6886e9d184da94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="main_8cpp.html#a81ce304348a420752ee080480d2b3095">main</a> cpp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a3de9a7275e27bde8ae6886e9d184da94">set_target_properties</a> (async PROPERTIES CXX_STANDARD 14 CXX_STANDARD_REQUIRED ON COMPILE_OPTIONS &quot;-Wall;-Wunused-<a class="el" href="_c_make_lists_8txt.html#a16435f33fc1d8ef131185b8d6740e367">parameter</a>;-<a class="el" href="_c_make_lists_8txt.html#a1b2bdaabe7939bd6bf795b37dd3b8787">Wextra</a>;-<a class="el" href="_c_make_lists_8txt.html#a3a17e755345aaf386d94372891081822">pedantic</a>;-Werror&quot;) set_target_properties(async_cli PROPERTIES CXX_STANDARD 14 CXX_STANDARD_REQUIRED ON COMPILE_OPTIONS &quot;-Wall</td></tr>
+<tr class="separator:a3de9a7275e27bde8ae6886e9d184da94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa37a1c6a6b486ddedb610d2ab2d2e5"><td class="memItemLeft" align="right" valign="top">Werror&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#aeaa37a1c6a6b486ddedb610d2ab2d2e5">target_link_libraries</a> (async_cli -fsanitize=address ${CMAKE_THREAD_LIBS_INIT} async) install(TARGETS async_cli RUNTIME DESTINATION bin) <a class="el" href="_c_make_lists_8txt.html#a9267ccdfbbaf6ba4f55c35f3a1f7fd90">set</a>(CPACK_GENERATOR DEB) <a class="el" href="_c_make_lists_8txt.html#a9267ccdfbbaf6ba4f55c35f3a1f7fd90">set</a>(CPACK_PACKAGE_VERSION_MAJOR &quot;$</td></tr>
+<tr class="separator:aeaa37a1c6a6b486ddedb610d2ab2d2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9267ccdfbbaf6ba4f55c35f3a1f7fd90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a9267ccdfbbaf6ba4f55c35f3a1f7fd90">set</a> (CPACK_PACKAGE_VERSION_MINOR &quot;${PROJECT_VERSION_MINOR}&quot;) set(CPACK_PACKAGE_VERSION_PATCH &quot;$</td></tr>
+<tr class="separator:a9267ccdfbbaf6ba4f55c35f3a1f7fd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a16435f33fc1d8ef131185b8d6740e367"><td class="memItemLeft" align="right" valign="top">Wunused&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a16435f33fc1d8ef131185b8d6740e367">parameter</a></td></tr>
+<tr class="separator:a16435f33fc1d8ef131185b8d6740e367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b2bdaabe7939bd6bf795b37dd3b8787"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a1b2bdaabe7939bd6bf795b37dd3b8787">Wextra</a></td></tr>
+<tr class="separator:a1b2bdaabe7939bd6bf795b37dd3b8787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a17e755345aaf386d94372891081822"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a3a17e755345aaf386d94372891081822">pedantic</a></td></tr>
+<tr class="separator:a3a17e755345aaf386d94372891081822"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ab7eb6c11e416cbb47a3d0d3e3467fac5"></a>
@@ -117,8 +133,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af85f971876ef2a74eb9e4141da60a698"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af85f971876ef2a74eb9e4141da60a698">&#9670;&nbsp;</a></span>find_package()</h2>
+<a id="a9bdffac531973ded817e95845104ba43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bdffac531973ded817e95845104ba43">&#9670;&nbsp;</a></span>find_package()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,8 +151,26 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a9267ccdfbbaf6ba4f55c35f3a1f7fd90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9267ccdfbbaf6ba4f55c35f3a1f7fd90">&#9670;&nbsp;</a></span>set() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">set </td>
+          <td>(</td>
+          <td class="paramtype">CPACK_PACKAGE_VERSION_MINOR &quot;${PROJECT_VERSION_MINOR}&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a47512afd6654a96f774df627445acfc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47512afd6654a96f774df627445acfc7">&#9670;&nbsp;</a></span>set()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a47512afd6654a96f774df627445acfc7">&#9670;&nbsp;</a></span>set() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,6 +181,85 @@ Functions</h2></td></tr>
           <td class="paramtype">ENV{GITHUB_RUN_NUMBER}&#160;</td>
           <td class="paramname"><em>1</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3de9a7275e27bde8ae6886e9d184da94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3de9a7275e27bde8ae6886e9d184da94">&#9670;&nbsp;</a></span>set_target_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="main_8cpp.html#a81ce304348a420752ee080480d2b3095">main</a> cpp set_target_properties </td>
+          <td>(</td>
+          <td class="paramtype">async PROPERTIES CXX_STANDARD 14 CXX_STANDARD_REQUIRED ON COMPILE_OPTIONS &quot;-Wall;-Wunused-<a class="el" href="_c_make_lists_8txt.html#a16435f33fc1d8ef131185b8d6740e367">parameter</a>;-<a class="el" href="_c_make_lists_8txt.html#a1b2bdaabe7939bd6bf795b37dd3b8787">Wextra</a>;-<a class="el" href="_c_make_lists_8txt.html#a3a17e755345aaf386d94372891081822">pedantic</a>;-Werror&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeaa37a1c6a6b486ddedb610d2ab2d2e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaa37a1c6a6b486ddedb610d2ab2d2e5">&#9670;&nbsp;</a></span>target_link_libraries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Werror target_link_libraries </td>
+          <td>(</td>
+          <td class="paramtype">async_cli -&#160;</td>
+          <td class="paramname"><em>fsanitize</em> = <code>address&#160;${CMAKE_THREAD_LIBS_INIT}&#160;async</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a16435f33fc1d8ef131185b8d6740e367"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16435f33fc1d8ef131185b8d6740e367">&#9670;&nbsp;</a></span>parameter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Wunused parameter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a17e755345aaf386d94372891081822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a17e755345aaf386d94372891081822">&#9670;&nbsp;</a></span>pedantic</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pedantic</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b2bdaabe7939bd6bf795b37dd3b8787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b2bdaabe7939bd6bf795b37dd3b8787">&#9670;&nbsp;</a></span>Wextra</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Wextra</td>
         </tr>
       </table>
 </div><div class="memdoc">
