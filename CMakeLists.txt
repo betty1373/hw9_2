@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.10.2)
 
 if (NOT DEFINED ENV{GITHUB_RUN_NUMBER})
     set(ENV{GITHUB_RUN_NUMBER} 1)
