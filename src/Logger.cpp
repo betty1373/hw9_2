@@ -16,7 +16,7 @@
             m_deque.push(ss.str());
         }
         //std::cout<<ss.str()<<std::endl;
-        m_cv.notify_all();
+        m_cv.notify_one();
     }
     void ConsoleLogger::SetContext(void* a_context)
     {
@@ -24,10 +24,12 @@
     }
 
     ConsoleLogger::ConsoleLogger(const std::string& m_name) :
-        m_stop {false},
-        m_thread {&ConsoleLogger::Work,this,m_name}
+        m_stop {false}
+        //,
+       // m_thread {&ConsoleLogger::Work,this}
     {
-         std::cout<<"Construct ConsoleLogger"<<std::endl;
+         m_thread = std::thread(&ConsoleLogger::Work, this);
+         std::cout<<"Construct"<<m_name<<std::endl;
     }
    void ConsoleLogger::SetCmdReader(std::shared_ptr<CmdReader>& _reader) {
         m_reader = _reader;
@@ -36,7 +38,7 @@
             ptr->Subscribe(shared_from_this());
         }
     }
-    void ConsoleLogger::Work(std::string prefix)
+    void ConsoleLogger::Work()
     { 
         std::string ss; 
         while (!m_stop)
@@ -53,8 +55,8 @@
             // std::cout<<ss.size()<<std::endl;
             if (ss.size())
             {
-               // std::unique_lock<std::mutex> lk(m_outmutex); 
-               // std::cout<<ss<<std::endl;
+               std::unique_lock<std::mutex> lk(m_outmutex); 
+               std::cout<<ss<<std::endl;
                ss.clear();
             }
             
@@ -86,7 +88,7 @@
         }
        // std::cout<<ss.str()<<std::endl;
         m_cv.notify_one();
-    };
+    }
     void FileLogger::SetContext(void* a_context)
     {
         m_context = a_context;

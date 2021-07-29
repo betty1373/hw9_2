@@ -1,5 +1,6 @@
 #include "../inc/async.h"
 #include "../inc/Context.h"
+#include "../inc/Logger.h"
 
 #include <map>
 #include <memory>

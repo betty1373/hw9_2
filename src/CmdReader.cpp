@@ -6,7 +6,7 @@
     }
     CmdReader::~CmdReader() {
         std::cout<<"Destroy CmdReader"<<std::endl;
-    };
+    }
 
     void CmdReader::Subscribe(const std::shared_ptr<Observer>& obs) {
         m_observers.emplace_back(obs);
@@ -26,7 +26,7 @@
                 m_observers.erase(it);
         }
         m_cmds.resize(0);
-    };
+    }
     
     void CmdReader::NewCmd(const std::string& cmd)
     { 
@@ -52,7 +52,7 @@
                 }
             }
              std::cout<<m_context<<std::endl;
-    };
+    }
     void CmdReader::SetContext(void* a_context)
     {
         m_context = a_context;
@@ -64,7 +64,7 @@
           m_cnt_braces{0}   {
                  m_cmds.reserve(m_num_cmds);
                  std::cout<<"Construct CmdReader"<<std::endl;
-    };
+    }
 
     std::stringstream CmdReader::FormBatch() {
         std::stringstream ss;

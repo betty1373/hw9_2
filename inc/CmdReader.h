@@ -30,8 +30,9 @@ private:
     std::stringstream FormBatch();
     void* m_context;
     size_t m_num_cmds;
-    size_t m_cnt_braces;
+    
     std::istream& m_istream;
+    size_t m_cnt_braces;
     std::vector<std::string> m_cmds;
     std::list<std::weak_ptr<Observer>> m_observers;
 };

@@ -5,7 +5,7 @@ if (NOT DEFINED ENV{GITHUB_RUN_NUMBER})
 endif()
 project(async VERSION 0.0.$ENV{GITHUB_RUN_NUMBER})
 find_package(Threads REQUIRED)
-set(CXX_STANDARD 20)
+set(CXX_STANDARD 14)
 configure_file(version.h.in ${PROJECT_SOURCE_DIR}/version.h)
 
 add_library(async SHARED ${PROJECT_SOURCE_DIR}/src/CmdReader.cpp 
@@ -14,11 +14,15 @@ add_library(async SHARED ${PROJECT_SOURCE_DIR}/src/CmdReader.cpp
                          ${PROJECT_SOURCE_DIR}/src/async.cpp)
 
 add_executable(async_cli ${PROJECT_SOURCE_DIR}/main.cpp)
-
-set_target_properties(async_cli PROPERTIES
-    CXX_STANDARD 20
+set_target_properties(async PROPERTIES
+    CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
-    COMPILE_OPTIONS "-Wall;-Wextra;-pedantic"
+    COMPILE_OPTIONS "-Wall;-Wunused-parameter;-Wextra;-pedantic;-Werror"
+)
+set_target_properties(async_cli PROPERTIES
+    CXX_STANDARD 14
+    CXX_STANDARD_REQUIRED ON
+    COMPILE_OPTIONS "-Wall;-Wunused-parameter;-Wextra;-pedantic;-Werror"
 )
 target_link_libraries(async_cli -fsanitize=address
     ${CMAKE_THREAD_LIBS_INIT}
