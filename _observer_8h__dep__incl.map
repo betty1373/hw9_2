@@ -1,7 +1,10 @@
 <map id="inc/Observer.h" name="inc/Observer.h">
-<area shape="rect" id="node1" title="Abstract Interfaces for ObserverPattern." alt="" coords="55,5,162,32"/>
-<area shape="rect" id="node2" href="$_cmd_reader_8h.html" title="Class for reading commands from input stream, processing their and notifying subscribers." alt="" coords="48,80,169,107"/>
-<area shape="rect" id="node3" href="$_logger_8h.html" title="Class outs data from stringstream to console." alt="" coords="62,155,155,181"/>
-<area shape="rect" id="node4" href="$_context_8h.html" title=" " alt="" coords="5,229,103,256"/>
-<area shape="rect" id="node5" href="$main_8cpp.html" title="Main function. Test for processing commands." alt="" coords="127,229,202,256"/>
+<area shape="rect" id="node1" title="Abstract Interfaces for ObserverPattern." alt="" coords="201,5,307,32"/>
+<area shape="rect" id="node2" href="$_cmd_reader_8h.html" title="Class for reading commands from input stream, processing their and notifying subscribers." alt="" coords="193,80,315,107"/>
+<area shape="rect" id="node3" href="$_logger_8h.html" title="Class outs data from stringstream to console." alt="" coords="138,155,231,181"/>
+<area shape="rect" id="node8" href="$_cmd_reader_8cpp.html" title=" " alt="" coords="255,155,391,181"/>
+<area shape="rect" id="node4" href="$_context_8h.html" title=" " alt="" coords="73,229,171,256"/>
+<area shape="rect" id="node7" href="$_logger_8cpp.html" title=" " alt="" coords="195,229,303,256"/>
+<area shape="rect" id="node5" href="$async_8cpp.html" title=" " alt="" coords="5,304,108,331"/>
+<area shape="rect" id="node6" href="$_context_8cpp.html" title=" " alt="" coords="133,304,245,331"/>
 </map>

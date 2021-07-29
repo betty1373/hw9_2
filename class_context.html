@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>bulkmt: Context Class Reference</title>
+<title>async: Context Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">bulkmt
+   <div id="projectname">async
    </div>
-   <div id="projectbrief">otus hw6</div>
+   <div id="projectbrief">otus hw8</div>
   </td>
  </tr>
  </tbody>
@@ -78,8 +78,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adfd31b39179c90e89e9d6b5a25574e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d34e4556448e40693f61d15e091b604"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_context.html#a2d34e4556448e40693f61d15e091b604">~Context</a> ()</td></tr>
 <tr class="separator:a2d34e4556448e40693f61d15e091b604"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4eea85f241cf5bbd939af6cef046ed39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_context.html#a4eea85f241cf5bbd939af6cef046ed39">ProccessBuffer</a> (const char *a_Buffer, std::size_t a_szSize)</td></tr>
-<tr class="separator:a4eea85f241cf5bbd939af6cef046ed39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad758b799754f762a8267596a0f7967c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_context.html#ad758b799754f762a8267596a0f7967c0">NewData</a> (const char *data, std::size_t size)</td></tr>
+<tr class="separator:ad758b799754f762a8267596a0f7967c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adfd31b39179c90e89e9d6b5a25574e0c"></a>
@@ -87,9 +87,6 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Context::Context </td>
@@ -99,11 +96,6 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -113,9 +105,6 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Context::~Context </td>
@@ -124,33 +113,28 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4eea85f241cf5bbd939af6cef046ed39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4eea85f241cf5bbd939af6cef046ed39">&#9670;&nbsp;</a></span>ProccessBuffer()</h2>
+<a id="ad758b799754f762a8267596a0f7967c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad758b799754f762a8267596a0f7967c0">&#9670;&nbsp;</a></span>NewData()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Context::ProccessBuffer </td>
+          <td class="memname">void Context::NewData </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>a_Buffer</em>, </td>
+          <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>a_szSize</em>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -162,8 +146,9 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>inc/<a class="el" href="_context_8h_source.html">Context.h</a></li>
+<li>src/<a class="el" href="_context_8cpp.html">Context.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

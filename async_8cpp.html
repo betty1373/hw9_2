@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>bulkmt: src/async.cpp File Reference</title>
+<title>async: src/async.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">bulkmt
+   <div id="projectname">async
    </div>
-   <div id="projectbrief">otus hw6</div>
+   <div id="projectbrief">otus hw8</div>
   </td>
  </tr>
  </tbody>
@@ -68,20 +68,42 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">async.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="async_8h_source.html">async.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="async_8h_source.html">../inc/async.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_context_8h_source.html">../inc/Context.h</a>&quot;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for async.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="async_8cpp__incl.png" border="0" usemap="#asrc_2async_8cpp" alt=""/></div>
 <map name="asrc_2async_8cpp" id="asrc_2async_8cpp">
-<area shape="rect" title=" " alt="" coords="5,5,108,32"/>
-<area shape="rect" href="async_8h.html" title=" " alt="" coords="23,80,90,107"/>
-<area shape="rect" title=" " alt="" coords="24,155,89,181"/>
+<area shape="rect" title=" " alt="" coords="639,5,741,32"/>
+<area shape="rect" href="async_8h.html" title=" " alt="" coords="124,80,221,107"/>
+<area shape="rect" href="_context_8h.html" title=" " alt="" coords="379,80,486,107"/>
+<area shape="rect" title=" " alt="" coords="873,379,941,405"/>
+<area shape="rect" title=" " alt="" coords="985,80,1032,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,71,181"/>
+<area shape="rect" title=" " alt="" coords="447,379,517,405"/>
+<area shape="rect" href="_logger_8h.html" title="Class outs data from stringstream to console." alt="" coords="397,155,469,181"/>
+<area shape="rect" title=" " alt="" coords="146,229,213,256"/>
+<area shape="rect" title=" " alt="" coords="237,229,298,256"/>
+<area shape="rect" title=" " alt="" coords="323,229,380,256"/>
+<area shape="rect" title=" " alt="" coords="404,229,461,256"/>
+<area shape="rect" title=" " alt="" coords="486,229,545,256"/>
+<area shape="rect" title=" " alt="" coords="569,229,696,256"/>
+<area shape="rect" href="_cmd_reader_8h.html" title="Class for reading commands from input stream, processing their and notifying subscribers." alt="" coords="720,229,820,256"/>
+<area shape="rect" title=" " alt="" coords="418,304,490,331"/>
+<area shape="rect" title=" " alt="" coords="514,304,573,331"/>
+<area shape="rect" title=" " alt="" coords="597,304,652,331"/>
+<area shape="rect" title=" " alt="" coords="676,304,715,331"/>
+<area shape="rect" title=" " alt="" coords="739,304,801,331"/>
+<area shape="rect" href="_observer_8h.html" title="Abstract Interfaces for ObserverPattern." alt="" coords="825,304,910,331"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -98,6 +120,13 @@ Functions</h2></td></tr>
 <tr class="separator:aa1b54e89e951488a8dd79e720f3d8f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04233bf9bec326f7bcb4e1a9d5b8ee9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasync.html#a04233bf9bec326f7bcb4e1a9d5b8ee9d">async::disconnect</a> (handle_t handle)</td></tr>
 <tr class="separator:a04233bf9bec326f7bcb4e1a9d5b8ee9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:af80ce59bc2c2ce28162538e080db1e78"><td class="memItemLeft" align="right" valign="top">std::map&lt; handle_t, std::shared_ptr&lt; <a class="el" href="class_context.html">Context</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasync.html#af80ce59bc2c2ce28162538e080db1e78">async::contexts</a></td></tr>
+<tr class="separator:af80ce59bc2c2ce28162538e080db1e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62894d3dac89fa6d4ce2441cb397715a"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceasync.html#a62894d3dac89fa6d4ce2441cb397715a">async::context_mutex</a></td></tr>
+<tr class="separator:a62894d3dac89fa6d4ce2441cb397715a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

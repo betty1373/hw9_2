@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>bulkmt: main.cpp File Reference</title>
+<title>async: main.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">bulkmt
+   <div id="projectname">async
    </div>
-   <div id="projectbrief">otus hw6</div>
+   <div id="projectbrief">otus hw8</div>
   </td>
  </tr>
  </tbody>
@@ -71,43 +71,33 @@ $(function() {
 
 <p>Main function. Test for processing commands.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="_logger_8h_source.html">inc/Logger.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="async_8h_source.html">inc/async.h</a>&quot;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#amain_8cpp" alt=""/></div>
 <map name="amain_8cpp" id="amain_8cpp">
-<area shape="rect" title="Main function. Test for processing commands." alt="" coords="255,5,329,32"/>
-<area shape="rect" href="_logger_8h.html" title="Class outs data from stringstream to console." alt="" coords="245,80,339,107"/>
-<area shape="rect" title=" " alt="" coords="5,155,72,181"/>
-<area shape="rect" title=" " alt="" coords="96,155,157,181"/>
-<area shape="rect" title=" " alt="" coords="182,155,239,181"/>
-<area shape="rect" title=" " alt="" coords="263,155,321,181"/>
-<area shape="rect" title=" " alt="" coords="345,155,404,181"/>
-<area shape="rect" title=" " alt="" coords="429,155,555,181"/>
-<area shape="rect" href="_cmd_reader_8h.html" title="Class for reading commands from input stream, processing their and notifying subscribers." alt="" coords="579,155,679,181"/>
-<area shape="rect" title=" " alt="" coords="387,229,459,256"/>
-<area shape="rect" title=" " alt="" coords="483,229,541,256"/>
-<area shape="rect" title=" " alt="" coords="566,229,621,256"/>
-<area shape="rect" title=" " alt="" coords="645,229,683,256"/>
-<area shape="rect" title=" " alt="" coords="708,229,769,256"/>
-<area shape="rect" href="_observer_8h.html" title="Abstract Interfaces for ObserverPattern." alt="" coords="793,229,879,256"/>
-<area shape="rect" title=" " alt="" coords="755,304,824,331"/>
-<area shape="rect" title=" " alt="" coords="849,304,917,331"/>
+<area shape="rect" title="Main function. Test for processing commands." alt="" coords="110,5,185,32"/>
+<area shape="rect" href="async_8h.html" title=" " alt="" coords="5,80,92,107"/>
+<area shape="rect" title=" " alt="" coords="117,80,178,107"/>
+<area shape="rect" title=" " alt="" coords="202,80,261,107"/>
+<area shape="rect" title=" " alt="" coords="16,155,81,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
-<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ce304348a420752ee080480d2b3095"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a81ce304348a420752ee080480d2b3095">main</a> (int, char *[])</td></tr>
+<tr class="separator:a81ce304348a420752ee080480d2b3095"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main function. Test for processing commands. </p>
 <dl class="section author"><dt>Author</dt><dd>btv<a href="#" onclick="location.href='mai'+'lto:'+'exa'+'mp'+'le@'+'ex'+'amp'+'le'+'.co'+'m'; return false;">examp<span style="display: none;">.nosp@m.</span>le@e<span style="display: none;">.nosp@m.</span>xampl<span style="display: none;">.nosp@m.</span>e.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
+<a id="a81ce304348a420752ee080480d2b3095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81ce304348a420752ee080480d2b3095">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -116,13 +106,13 @@ Functions</h2></td></tr>
           <td class="memname">int main </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>argc</em>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>argv</em>[]&#160;</td>
+          <td class="paramname">[]&#160;</td>
         </tr>
         <tr>
           <td></td>

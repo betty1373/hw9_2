@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>bulkmt: CMakeLists.txt File Reference</title>
+<title>async: CMakeLists.txt File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">bulkmt
+   <div id="projectname">async
    </div>
-   <div id="projectbrief">otus hw6</div>
+   <div id="projectbrief">otus hw8</div>
   </td>
  </tr>
  </tbody>
@@ -63,8 +63,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">CMakeLists.txt File Reference</div>  </div>
 </div><!--header-->
@@ -72,38 +71,27 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8d79dde94567b730c2e3ea0f264270c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a8d79dde94567b730c2e3ea0f264270c2">cmake_minimum_required</a> (VERSION 3.2) if(NOT DEFINED ENV</td></tr>
-<tr class="separator:a8d79dde94567b730c2e3ea0f264270c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee179ed686fbcfa553957f2befcd2ab4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#aee179ed686fbcfa553957f2befcd2ab4">set</a> (ENV{GITHUB_RUN_NUMBER} 1) endif() project(bulkmt VERSION 0.0. $ENV</td></tr>
-<tr class="separator:aee179ed686fbcfa553957f2befcd2ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a445c647ce87fac03189795f08bf3a1ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a445c647ce87fac03189795f08bf3a1ca">find_package</a> (Threads REQUIRED) configure_file(version.h.in $</td></tr>
-<tr class="separator:a445c647ce87fac03189795f08bf3a1ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af25fe74783b0a46063cb193a311d358d"><td class="memItemLeft" align="right" valign="top">version h&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#af25fe74783b0a46063cb193a311d358d">add_executable</a> (bulkmt ${PROJECT_SOURCE_DIR}/main.cpp ${PROJECT_SOURCE_DIR}/inc/Logger.h) <a class="el" href="_c_make_lists_8txt.html#a9267ccdfbbaf6ba4f55c35f3a1f7fd90">set</a>(CMAKE_CXX_FLAGS &quot;$</td></tr>
-<tr class="separator:af25fe74783b0a46063cb193a311d358d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0202eeaf0c797956848dd9fe7f308db2"><td class="memItemLeft" align="right" valign="top">pedantic&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a0202eeaf0c797956848dd9fe7f308db2">target_link_libraries</a> (bulkmt -<a class="el" href="_c_make_lists_8txt.html#a413f838b5a146a90a6eaf63397485bda">fsanitize</a>=address ${CMAKE_THREAD_LIBS_INIT}) install(TARGETS bulkmt RUNTIME DESTINATION bin) <a class="el" href="_c_make_lists_8txt.html#a9267ccdfbbaf6ba4f55c35f3a1f7fd90">set</a>(CPACK_GENERATOR DEB) <a class="el" href="_c_make_lists_8txt.html#a9267ccdfbbaf6ba4f55c35f3a1f7fd90">set</a>(CPACK_PACKAGE_VERSION_MAJOR &quot;$</td></tr>
-<tr class="separator:a0202eeaf0c797956848dd9fe7f308db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9267ccdfbbaf6ba4f55c35f3a1f7fd90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a9267ccdfbbaf6ba4f55c35f3a1f7fd90">set</a> (CPACK_PACKAGE_VERSION_MINOR &quot;${PROJECT_VERSION_MINOR}&quot;) set(CPACK_PACKAGE_VERSION_PATCH &quot;$</td></tr>
-<tr class="separator:a9267ccdfbbaf6ba4f55c35f3a1f7fd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a413f838b5a146a90a6eaf63397485bda"><td class="memItemLeft" align="right" valign="top">fno omit frame pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a413f838b5a146a90a6eaf63397485bda">fsanitize</a></td></tr>
-<tr class="separator:a413f838b5a146a90a6eaf63397485bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b2bdaabe7939bd6bf795b37dd3b8787"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a1b2bdaabe7939bd6bf795b37dd3b8787">Wextra</a></td></tr>
-<tr class="separator:a1b2bdaabe7939bd6bf795b37dd3b8787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc86fa819c55f45cb5f2c9d0e2aae45e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#afc86fa819c55f45cb5f2c9d0e2aae45e">cmake_minimum_required</a> (VERSION 3.10.2) if(NOT DEFINED ENV</td></tr>
+<tr class="separator:afc86fa819c55f45cb5f2c9d0e2aae45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47512afd6654a96f774df627445acfc7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a47512afd6654a96f774df627445acfc7">set</a> (ENV{GITHUB_RUN_NUMBER} 1) endif() project(async VERSION 0.0. $ENV</td></tr>
+<tr class="separator:a47512afd6654a96f774df627445acfc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af85f971876ef2a74eb9e4141da60a698"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#af85f971876ef2a74eb9e4141da60a698">find_package</a> (Threads REQUIRED) <a class="el" href="_c_make_lists_8txt.html#a47512afd6654a96f774df627445acfc7">set</a>(CXX_STANDARD 20) configure_file(version.h.in $</td></tr>
+<tr class="separator:af85f971876ef2a74eb9e4141da60a698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7eb6c11e416cbb47a3d0d3e3467fac5"><td class="memItemLeft" align="right" valign="top">version h&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#ab7eb6c11e416cbb47a3d0d3e3467fac5">add_library</a> (async SHARED ${PROJECT_SOURCE_DIR}/src/CmdReader.cpp ${PROJECT_SOURCE_DIR}/src/Logger.cpp ${PROJECT_SOURCE_DIR}/src/Context.cpp ${PROJECT_SOURCE_DIR}/src/async.cpp) add_executable(async_cli $</td></tr>
+<tr class="separator:ab7eb6c11e416cbb47a3d0d3e3467fac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="af25fe74783b0a46063cb193a311d358d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af25fe74783b0a46063cb193a311d358d">&#9670;&nbsp;</a></span>add_executable()</h2>
+<a id="ab7eb6c11e416cbb47a3d0d3e3467fac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7eb6c11e416cbb47a3d0d3e3467fac5">&#9670;&nbsp;</a></span>add_library()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">version h add_executable </td>
+          <td class="memname">version h add_library </td>
           <td>(</td>
-          <td class="paramtype">bulkmt ${PROJECT_SOURCE_DIR}/main.cpp ${PROJECT_SOURCE_DIR}/inc/Logger.&#160;</td>
-          <td class="paramname"><em>h</em></td><td>)</td>
+          <td class="paramtype">async SHARED ${PROJECT_SOURCE_DIR}/src/CmdReader.cpp ${PROJECT_SOURCE_DIR}/src/Logger.cpp ${PROJECT_SOURCE_DIR}/src/Context.cpp ${PROJECT_SOURCE_DIR}/src/async.&#160;</td>
+          <td class="paramname"><em>cpp</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -111,8 +99,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a8d79dde94567b730c2e3ea0f264270c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d79dde94567b730c2e3ea0f264270c2">&#9670;&nbsp;</a></span>cmake_minimum_required()</h2>
+<a id="afc86fa819c55f45cb5f2c9d0e2aae45e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc86fa819c55f45cb5f2c9d0e2aae45e">&#9670;&nbsp;</a></span>cmake_minimum_required()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -120,7 +108,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">cmake_minimum_required </td>
           <td>(</td>
-          <td class="paramtype">VERSION 3.&#160;</td>
+          <td class="paramtype">VERSION 3.10.&#160;</td>
           <td class="paramname"><em>2</em></td><td>)</td>
           <td></td>
         </tr>
@@ -129,8 +117,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a445c647ce87fac03189795f08bf3a1ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a445c647ce87fac03189795f08bf3a1ca">&#9670;&nbsp;</a></span>find_package()</h2>
+<a id="af85f971876ef2a74eb9e4141da60a698"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af85f971876ef2a74eb9e4141da60a698">&#9670;&nbsp;</a></span>find_package()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,26 +135,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a9267ccdfbbaf6ba4f55c35f3a1f7fd90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9267ccdfbbaf6ba4f55c35f3a1f7fd90">&#9670;&nbsp;</a></span>set() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">set </td>
-          <td>(</td>
-          <td class="paramtype">CPACK_PACKAGE_VERSION_MINOR &quot;${PROJECT_VERSION_MINOR}&quot;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aee179ed686fbcfa553957f2befcd2ab4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee179ed686fbcfa553957f2befcd2ab4">&#9670;&nbsp;</a></span>set() <span class="overload">[2/2]</span></h2>
+<a id="a47512afd6654a96f774df627445acfc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47512afd6654a96f774df627445acfc7">&#9670;&nbsp;</a></span>set()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,61 +147,6 @@ Variables</h2></td></tr>
           <td class="paramtype">ENV{GITHUB_RUN_NUMBER}&#160;</td>
           <td class="paramname"><em>1</em></td><td>)</td>
           <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0202eeaf0c797956848dd9fe7f308db2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0202eeaf0c797956848dd9fe7f308db2">&#9670;&nbsp;</a></span>target_link_libraries()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">pedantic target_link_libraries </td>
-          <td>(</td>
-          <td class="paramtype">bulkmt -&#160;</td>
-          <td class="paramname"><em>fsanitize</em> = <code>address&#160;${CMAKE_THREAD_LIBS_INIT}</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a413f838b5a146a90a6eaf63397485bda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a413f838b5a146a90a6eaf63397485bda">&#9670;&nbsp;</a></span>fsanitize</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">fno omit frame pointer fsanitize</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=address<span class="stringliteral">&quot;)</span></div>
-<div class="line"><span class="stringliteral">set (CMAKE_LINKER_FLAGS &quot;</span>${CMAKE_LINKER_FLAGS} -fno-omit-frame-pointer -<a class="code" href="_c_make_lists_8txt.html#a413f838b5a146a90a6eaf63397485bda">fsanitize</a>=address<span class="stringliteral">&quot;)</span></div>
-<div class="line"><span class="stringliteral"></span> </div>
-<div class="line"><span class="stringliteral">set_target_properties(bulkmt PROPERTIES</span></div>
-<div class="line"><span class="stringliteral">    CXX_STANDARD 20</span></div>
-<div class="line"><span class="stringliteral">    CXX_STANDARD_REQUIRED ON</span></div>
-<div class="line"><span class="stringliteral">    COMPILE_OPTIONS &quot;</span>-Wall</div>
-<div class="ttc" id="a_c_make_lists_8txt_html_a413f838b5a146a90a6eaf63397485bda"><div class="ttname"><a href="_c_make_lists_8txt.html#a413f838b5a146a90a6eaf63397485bda">fsanitize</a></div><div class="ttdeci">fno omit frame pointer fsanitize</div><div class="ttdef"><b>Definition:</b> CMakeLists.txt:12</div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a1b2bdaabe7939bd6bf795b37dd3b8787"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b2bdaabe7939bd6bf795b37dd3b8787">&#9670;&nbsp;</a></span>Wextra</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Wextra</td>
         </tr>
       </table>
 </div><div class="memdoc">

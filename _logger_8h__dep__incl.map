@@ -1,5 +1,7 @@
 <map id="inc/Logger.h" name="inc/Logger.h">
-<area shape="rect" id="node1" title="Class outs data from stringstream to console." alt="" coords="62,5,155,32"/>
-<area shape="rect" id="node2" href="$_context_8h.html" title=" " alt="" coords="5,80,103,107"/>
-<area shape="rect" id="node3" href="$main_8cpp.html" title="Main function. Test for processing commands." alt="" coords="127,80,202,107"/>
+<area shape="rect" id="node1" title="Class outs data from stringstream to console." alt="" coords="138,5,231,32"/>
+<area shape="rect" id="node2" href="$_context_8h.html" title=" " alt="" coords="73,80,171,107"/>
+<area shape="rect" id="node5" href="$_logger_8cpp.html" title=" " alt="" coords="195,80,303,107"/>
+<area shape="rect" id="node3" href="$async_8cpp.html" title=" " alt="" coords="5,155,108,181"/>
+<area shape="rect" id="node4" href="$_context_8cpp.html" title=" " alt="" coords="133,155,245,181"/>
 </map>
