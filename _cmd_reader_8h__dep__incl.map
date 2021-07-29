@@ -1,8 +1,8 @@
 <map id="inc/CmdReader.h" name="inc/CmdReader.h">
-<area shape="rect" id="node1" title="Class for reading commands from input stream, processing their and notifying subscribers." alt="" coords="152,5,273,32"/>
+<area shape="rect" id="node1" title="Class for processing commands and notifying subscribers." alt="" coords="152,5,273,32"/>
 <area shape="rect" id="node2" href="$_logger_8h.html" title="Class outs data from stringstream to console." alt="" coords="97,80,190,107"/>
 <area shape="rect" id="node7" href="$_cmd_reader_8cpp.html" title=" " alt="" coords="214,80,350,107"/>
-<area shape="rect" id="node3" href="$_context_8h.html" title=" " alt="" coords="95,155,192,181"/>
+<area shape="rect" id="node3" href="$_context_8h.html" title="Class context for async processing commands." alt="" coords="95,155,192,181"/>
 <area shape="rect" id="node4" href="$async_8cpp.html" title=" " alt="" coords="5,229,108,256"/>
 <area shape="rect" id="node6" href="$_logger_8cpp.html" title=" " alt="" coords="216,155,324,181"/>
 <area shape="rect" id="node5" href="$_context_8cpp.html" title=" " alt="" coords="133,229,245,256"/>
